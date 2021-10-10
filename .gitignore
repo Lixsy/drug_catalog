@@ -1,0 +1,4 @@
+/venv/
+sqlite_drug_db.db
+.pytest_cache
+.idea

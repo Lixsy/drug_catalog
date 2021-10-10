@@ -1,0 +1,19 @@
+version: "3.1"
+services:
+  drug_catalog:
+    build: .
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - pg_user=test
+      - pg_pass=test
+      - pg_host=db
+      - pg_db=drug_catalog
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=drug_catalog
